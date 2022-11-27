@@ -1,0 +1,27 @@
+Week 12 Rubrics Programming Assignment: Stock Prophet Deployment
+
+Q: How does the Prophet Algorithm differ from an LSTM?
+Why does an LSTM have poor performance against ARIMA and Profit for Time Series?
+
+A: LSTM prediction is a kind of RNN keeps certain set of last values. This makes LSTM less prone to variance due to seasonality and consider latest/current trend.  
+While Prophet Algorithm is an additive system, and due to its robustness can handle seasonalities, missing data and can plan for future predictions for yearly, monthly etc. periods. 
+
+ARIMA is a standard econometrics model, Prophet is based on Fourier Series Seasonality and LSTM is a deep learning model. All three are very diverse.
+
+Multiple comparison studies have been done, and by far, LSTM may work better than ARIMA or Prophet, but will definitely take much longer time to hyperparameter tuning. Prophet is quickest to set up, and doesn't need much data pre-processing.
+
+Q: What is exponential smoothing and why is it used in Time Series Forecasting?
+A: Also known as rolling average method, exponential smoothing gives more weight to the more recent observations in the data, and fades out older data. This is a quick way to forecast.
+
+Q: What is stationarity? What is seasonality? Why Is Stationarity Important in Time Series Forecasting?
+
+A: Stationarity is the residual property of data, by removing all kinds of seasonailities, trends, irregularities, cycles etc from the original data set. 
+
+Seasonality represents a certain pattern which is temporary, and is predictable for a known time period. For example, growth is sales during holidays, more food orders during lunch and dinner times etc.
+
+Stationarity is significant to achieve before starting TSA. Removing all kinds of abnormalties leaves a dataset which is predictable. Important factor is that once the prediction is done, the data needs to be inverse transformed to bring back effects of those abnormalties.
+
+Q: How is seasonality different from cyclicality? Fill in the blanks:
+Seasonality___ is predictable, whereas cyclicality ___ is not.
+
+A: Seasonality is known for a fixed period, while cyclicality refers to fall and rise but not of over a fixed period.
